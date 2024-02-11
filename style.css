@@ -1,0 +1,87 @@
+/* Page Formatting */
+* {
+    font-size: 16px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+header {
+    align-items: center;
+}
+
+h1 {
+    font-size:2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    line-height: 1.6rem;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+nav {
+    /* background-color: yellow; */
+    width: 25%;
+    position: fixed;
+}
+
+.main {
+    /* background-color: blue; */
+    width: 50%;
+    margin-left: 25%;
+}
+
+.contact {
+    /* background-color: green; */
+    width: 25%;
+}
+
+/* Navigations */
+
+/* Main Content */
+
+#name {
+    margin: 5% 0;
+}
+
+#divider {
+    border: solid black 1px;
+    width: 90%;
+}
+
+/* Projects */
+.projects-list h3 {
+    cursor: pointer;
+}
+
+/* Contact */
+.socials {
+    display: flex;
+    justify-content: start;
+    position: fixed;
+}
+
+
+.socials-profile {
+    width: 10%;
+}
