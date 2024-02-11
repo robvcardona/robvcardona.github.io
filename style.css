@@ -85,3 +85,43 @@ nav {
 .socials-profile {
     width: 10%;
 }
+
+@media only screen and (max-width: 1200px) {
+    .socials-profile {
+        width: 12%;
+    }
+}
+
+/* Tablet */
+
+@media only screen and (max-width: 768px) {
+    body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+    }    
+
+    nav {
+        /* background-color: yellow; */
+        width: 25%;
+        position: static;
+        display: none;
+    }
+    .main {
+        margin-left: 0px;
+    }
+    .socials-list {
+        display: inline-flex;
+        justify-content: space-around;
+    }
+    .socials-profile {
+        width: 50%;
+    }
+
+    #github {
+        width: 53%;
+    }
+}
