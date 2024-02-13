@@ -1,41 +1,14 @@
 // Projcets titles
-let projectTitle1 = document.getElementById('project-title1');
-let projectTitle2 = document.getElementById('project-title2');
-let projectTitle3 = document.getElementById('project-title3');
+let projectTitles = document.querySelectorAll('.project-title');
+let projectInfos = document.getElementsByClassName('project-info');
 
-
-// Projects infos
-let projectInfo1 = document.getElementById('project-info1');
-let projectInfo2 = document.getElementById('project-info2');
-let projectInfo3 = document.getElementById('project-info3');
-
-// Hide projects info
-projectInfo1.style.display = "none";
-projectInfo2.style.display = "none";
-projectInfo3.style.display = "none";
-
-
-projectTitle1.onclick = function() {
-        if (projectInfo1.style.display === "none") {
-                projectInfo1.style.display = "block";
+projectTitles.forEach((title, index) => {
+    title.onclick = () => {
+        // Toggle display for the corresponding project-info
+        if (projectInfos[index].style.display === 'none' || projectInfos[index].style.display === '') {
+            projectInfos[index].style.display = 'block';
         } else {
-                projectInfo1.style.display = "none";
+            projectInfos[index].style.display = 'none';
         }
-};
-
-projectTitle2.onclick = function() {
-        if (projectInfo2.style.display === "none") {
-                projectInfo2.style.display = "block";
-        } else {
-                projectInfo2.style.display = "none";
-        }
-};
-
-projectTitle3.onclick = function() {
-        if (projectInfo3.style.display === "none") {
-                projectInfo3.style.display = "block";
-        } else {
-                projectInfo3.style.display = "none";
-        }
-};
-
+    };
+});
