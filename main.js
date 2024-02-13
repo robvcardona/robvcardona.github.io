@@ -10,32 +10,32 @@ let projectInfo2 = document.getElementById('project-info2');
 let projectInfo3 = document.getElementById('project-info3');
 
 // Hide projects info
-projectInfo1.hidden = true;
-projectInfo2.hidden = true;
-projectInfo3.hidden = true;
+projectInfo1.style.display = "none";
+projectInfo2.style.display = "none";
+projectInfo3.style.display = "none";
 
 
 projectTitle1.onclick = function() {
-        if (projectInfo1.hidden === true) {
-                projectInfo1.hidden = false;
+        if (projectInfo1.style.display === "none") {
+                projectInfo1.style.display = "block";
         } else {
-                projectInfo1.hidden = true;
+                projectInfo1.style.display = "none";
         }
 };
 
 projectTitle2.onclick = function() {
-        if (projectInfo2.hidden === true) {
-                projectInfo2.hidden = false;
+        if (projectInfo2.style.display === "none") {
+                projectInfo2.style.display = "block";
         } else {
-                projectInfo2.hidden = true;
+                projectInfo2.style.display = "none";
         }
 };
 
 projectTitle3.onclick = function() {
-        if (projectInfo3.hidden === true) {
-                projectInfo3.hidden = false;
+        if (projectInfo3.style.display === "none") {
+                projectInfo3.style.display = "block";
         } else {
-                projectInfo3.hidden = true;
+                projectInfo3.style.display = "none";
         }
 };
 
