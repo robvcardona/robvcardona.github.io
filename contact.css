@@ -1,0 +1,44 @@
+* {
+    font-size: 16px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+a {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: black;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-left: 2rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2rem;
+}
+
+img {
+    width: 3rem;
+    margin: 0 1rem;
+}
