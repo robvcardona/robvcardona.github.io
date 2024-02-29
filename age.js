@@ -1,34 +1,38 @@
-let monthNames = ["January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December"
-    ];
+// Set the birthdate
+const myBirthdate = new Date("February 14, 1998");
 
-let today = new Date();
+// Function to update age
+function updateAge() {
+    // Get the current date and time
+    const now = new Date();
 
-const myMonth = "February"
-const myDay = 14
-const myYear = 1998
+    // Calculate the difference in milliseconds
+    const ageInMilliseconds = now - myBirthdate;
 
-const birthd = myYear + " " + myMonth + " " + myDay;
+    // Calculate years, months, days, hours, minutes, and seconds
+    const years = now.getFullYear() - myBirthdate.getFullYear();
+    const months = now.getMonth() - myBirthdate.getMonth();
+    const days = now.getDate() - myBirthdate.getDate();
+    const hours = now.getHours() - myBirthdate.getHours();
+    const minutes = now.getMinutes() - myBirthdate.getMinutes();
+    const seconds = Math.floor(ageInMilliseconds / 1000) % 60;
 
-let birthday = new Date(birthd);
+    // Display the age
+    let ageOutput = `Age: ${years} years, ${months} months, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
 
-let diffAlive = today - birthday;
+    // Update the element with the calculated age
+    let ageElement = document.getElementById("age");
 
-milliseconds = diffAlive % 1000;
-diffAlive = (diffAlive - (milliseconds)) / 1000;
+    // Check if the element exists before updating its content
+    if (ageElement) {
+        ageElement.innerHTML = ageOutput;
+    } else {
+        console.error("Error: Element with id 'age' not found.");
+    }
+}
 
-seconds = diffAlive % 60
+// Initial call to updateAge to display the age when the page loads
+updateAge();
 
-diffAlive = (diffAlive - seconds) / 60;
-
-minutes = diffAlive % 60
-diffAlive = (diffAlive - minutes) / 60;
-
-hours = diffAlive % 24
-days = (diffAlive - hours) / 24;
-
-let thisYear = today.getFullYear()
-let myAge = thisYear - myYear;
-
-let aliveFor = document.getElementById("age").innerHTML = "Age:" + " " + myAge + " " + "years, " + days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds old";
-
+// Update the age every second
+setInterval(updateAge, 1000);
